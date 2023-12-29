@@ -1,7 +1,8 @@
 import './App.css';
+import MainPage from "./MainPage/MainPage"
 import Application from "./Application/Application"
+import NotFound from "./NotFound/NotFound"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-// import { CookiesProvider, useCookies } from "react-cookie";
 import React from 'react';
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
     <>
       <BrowserRouter >
         <Routes>         
+          <Route path='*' element = {<NotFound/>}/>
           <Route path="/Application" element={<Application/>} />
+          <Route path='/' element = {<MainPage/>}/>
         </Routes>
       </BrowserRouter>
     </>

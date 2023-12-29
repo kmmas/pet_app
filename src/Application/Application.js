@@ -21,14 +21,14 @@ function Application() {
                         <h1 className='Alogo2'><h1 className='Alogo1'>Pet</h1>Adoption</h1>
                     </div>
                     <div className='ALinkHolder'>
-                        <div className='ALinkH'><Link className='ALink'>Home</Link></div>
+                        <div className='ALinkH'><Link to={"/"} className='ALink'>Home</Link></div>
                         <div className='ALinkH'><Link className='ALink'>My Profile</Link></div>
                         <div className='ALinkH'><Link className='ALink'>Contact Us</Link></div>
                         <div className='ALinkH'><Link className='ALink'>Log Out</Link></div>
                     </div>
                 </nav>
                 <section className='Asec'>
-                    <form action="/Login.js" method="post" className='Aff2' >
+                    <form action="/" method="post" className='Aff2' >
                         <div className='Atitle'>
                             <h2>Application</h2>
                         </div>
