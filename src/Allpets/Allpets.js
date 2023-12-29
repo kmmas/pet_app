@@ -1,8 +1,8 @@
-import './MainPage.css';
+import './Allpets.css';
 // import { CookiesProvider, useCookies } from "react-cookie";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-function Application() {
+function Allpets() {
     const [info, setInfo] = useState({
         firstName: '',
         lastName: '',
@@ -65,17 +65,18 @@ function Application() {
                         <div className='Mfiltersort'>
                         <div className='Mfilter'>
                                 <label className='Mlabel2'>Search By</label>
-                                <select className='Min2' placeholder='Sort' id='sort' name="sort" required onChange={handleChange}>
+                                <select className='Min2' placeholder='Filter' id='filter' name="filter" required onChange={handleChange}>
                                     <option value="Name" >Name</option>
                                     <option value="Age">Age</option>
                                     <option value="Age" selected>Species</option>
                                     <option value="Age">Breed</option>
                                     <option value="Gender">Gender</option>
+                                    <option value="Gender">Shelter Location</option>
                                 </select>
                             </div>
                             <div className='Msort'>
                                 <label className='Mlabel2'>Sort By</label>
-                                <select className='Min2' placeholder='Search' id='search' name="search" required onChange={handleChange}>
+                                <select className='Min2' placeholder='Sort' id='Sort' name="Sort" required onChange={handleChange}>
                                     <option value="Name" selected>Name</option>
                                     <option value="Age">Age</option>
                                     <option value="Age">Species</option>
@@ -130,4 +131,4 @@ function Application() {
     );
 }
 
-export default Application;
+export default Allpets;

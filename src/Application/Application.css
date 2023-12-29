@@ -78,7 +78,6 @@ h1, h2, h3, p {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.89);
-    position: fixed;
 }
 .Asec{
     width: 100%;

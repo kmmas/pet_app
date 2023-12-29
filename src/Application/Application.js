@@ -4,9 +4,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 function Application() {
     const [info, setInfo] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
+        username: '',
+        name: '',
         phone: '',
         gender: ''
     })
@@ -34,7 +33,7 @@ function Application() {
                         </div>
                         <div className='Aflp'>
                             <label className='Alabel' for="">UserName: </label>
-                            <input className='Ain' placeholder='UserName' name="email" id='email' type='text' required onChange={handleChange} />
+                            <input className='Ain' placeholder='UserName' name="username" id='username' type='text' required onChange={handleChange} />
                         </div>
                         <div className='Aflp'>
                             <label className='Alabel' for="">Name: </label>
