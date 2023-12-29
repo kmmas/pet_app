@@ -33,16 +33,12 @@ function Application() {
                             <h2>Application</h2>
                         </div>
                         <div className='Aflp'>
-                            <label className='Alabel' for="">Email: </label>
-                            <input className='Ain' placeholder='Email' name="email" id='email' type='text' required onChange={handleChange} />
+                            <label className='Alabel' for="">UserName: </label>
+                            <input className='Ain' placeholder='UserName' name="email" id='email' type='text' required onChange={handleChange} />
                         </div>
                         <div className='Aflp'>
-                            <label className='Alabel' for="">First Name: </label>
-                            <input className='Ain' placeholder='FirstName' name="firstName" id='fname' type='text' required onChange={handleChange} />
-                        </div>
-                        <div className='Aflp'>
-                        <label className='Alabel' for="">Last Name: </label>
-                            <input className='Ain' placeholder='LastName' name="lastName" id='lname' type='text' required onChange={handleChange} />
+                            <label className='Alabel' for="">Name: </label>
+                            <input className='Ain' placeholder='Name' name="name" id='name' type='text' required onChange={handleChange} />
                         </div>
                         <div className='Aflp'>
                             <label className='Alabel' for="">Phone: </label>

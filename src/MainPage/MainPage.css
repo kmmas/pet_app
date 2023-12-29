@@ -1,5 +1,5 @@
 .Mbody{
-    background-image: url("./dd.jpg");
+    background-image: url("../images/dd.jpg");
     background-size:  cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -135,9 +135,6 @@
     border-radius: 50%;
     margin-top: 10px;
     margin-left: 10px;
-    background-image: url("./bird.jpg");
-    background-size: cover;
-    background-position: center;
 }
 .MLinkHolder{
     width: 130px;
@@ -200,7 +197,7 @@
     font-weight: bold;
     font-family: cursive;
     height: 26px;
-    color: rgb(255, 183, 0);
+    color: rgba(255, 255, 255, 0.795);
 }
 @media (max-width: 900px) {
     .Mbody {

@@ -10,6 +10,36 @@ function Application() {
         phone: '',
         gender: ''
     })
+    const pets = [
+            {image : require("../images/cat.jpg"),
+            name  : 'LoLo',
+            age  : '3 Months',
+            species : 'Cats',
+            breed  : 'Persian',
+            gender : 'Male'
+            },
+            {image : require("../images/doogg.jpg"),
+            name  : 'Dody',
+            age  : '1 Year',
+            species : 'Dogs',
+            breed  : 'Golden Retriever',
+            gender : 'Male'
+            },
+            {image : require("../images/animal.jpg"),
+            name  : 'Migo',
+            age  : '2 Years',
+            species : 'Hippopotamus amphibius',
+            breed  : 'No Breed',
+            gender : 'Female'
+            },
+            {image : require("../images/dd.jpg"),
+            name  : 'Mady',
+            age  : '2 Months',
+            species : 'Dogs',
+            breed  : 'Siberian Husky',
+            gender : 'Male'
+            },
+    ]
     function handleChange(event) {
         setInfo({ ...info, [event.target.name]: event.target.value })
     }
@@ -57,8 +87,9 @@ function Application() {
                     </div>
                     <div className='McardsSpace'>
                         <div className='Mcardsholder'>
+                            {pets.map((pet) => (
                             <div className='Mcard'>
-                                <img className='Mimg'></img>
+                                <img src={pet.image} alt='error' className='Mimg'/>
                                 <div className='MLinkHolder'>
                                     <Link className='Mlink'>View Profile</Link>
                                     <Link className='Mlink'>Direct Adoption</Link>
@@ -66,541 +97,31 @@ function Application() {
                                 <div className='Minfo'>
                                     <div className='Minfoparts'>
                                     <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
+                                    <p className='Mp'>{pet.name}</p>
                                     </div>
                                     <div className='Minfoparts'>
                                     <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
+                                    <p className='Mp'>{pet.age}</p>
 
                                     </div>
                                     <div className='Minfoparts'>
                                     <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
+                                    <p className='Mp'>{pet.species}</p>
 
                                     </div>
                                     <div className='Minfoparts'>
                                     <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
+                                    <p className='Mp'>{pet.breed}</p>
 
                                     </div>
                                     <div className='Minfoparts'>
                                     <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
+                                    <p className='Mp'>{pet.gender}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
+                            ))}
 
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='Mcard'>
-                                <img className='Mimg'></img>
-                                <div className='MLinkHolder'>
-                                    <Link className='Mlink'>View Profile</Link>
-                                    <Link className='Mlink'>Direct Adoption</Link>
-                                </div>
-                                <div className='Minfo'>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Name:</label>
-                                    <p className='Mp'>Mohamed</p>
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Age:</label>
-                                    <p className='Mp'>2 years</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Species:</label>
-                                    <p className='Mp'>Bird</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Breed:</label>
-                                    <p className='Mp'>Male</p>
-
-                                    </div>
-                                    <div className='Minfoparts'>
-                                    <label className='Mlabel'>Gender:</label>
-                                    <p className='Mp'>Male</p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>
